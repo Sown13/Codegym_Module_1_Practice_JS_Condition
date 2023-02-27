@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thực hành kiểm tra năm nhuận</title>
+</head>
+<body>
+<h1> Kiểm tra xem năm nào đó có phải năm nhuận không </h1>
+<button onclick="leapYearCheck()"> Kiểm tra </button>
+<script>
+    function leapYearCheck() {
+        let year = parseInt(prompt("Nhập năm bạn muốn kiểm tra vào đây", "ví dụ: 2000"));
+        let leapYear = false;
+        let isDivisibleBy4 = year % 4 == 0;
+        if (isDivisibleBy4) {
+            let isDivisibleBy100 = year % 100 == 0;
+            if (isDivisibleBy100) {
+                let isDivisibleBy400 = year % 400 == 0;
+                if (isDivisibleBy400) {
+                    leapYear = true;
+                }
+            } else {
+                leapYear = true;
+            }
+        }
+
+        if (leapYear) {
+            alert(year + " " + "là năm nhuận")
+        } else {
+            alert(year + " " + "không phải là năm nhuận")
+        }
+    }
+
+</script>
+</body>
+</html>
