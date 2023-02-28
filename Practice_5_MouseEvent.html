@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập thực hành sự kiện chuột</title>
+</head>
+<body>
+<img src="Moving_Right.png" id="rightArrow" alt="you lose" style="position: relative; left: 0">
+<br>
+<button type="button" id="buttonRight" onclick="moveRight()"> >>>>>>> </button>
+<script>
+  let imgRightArrow = null;
+  imgRightArrow = document.getElementById("rightArrow");
+ // function startup(){
+ //    imgRightArrow = document.getElementById("rightArrow");
+ //    imgRightArrow.style.position = "relative";
+ //    imgRightArrow.style.left = "0px";
+ //  }
+
+  function moveRight(){
+    console.log(imgRightArrow.style.left);
+    imgRightArrow.style.left = parseInt(imgRightArrow.style.left) + 10 + "px"
+  }
+ // window.onload = startup;
+
+
+</script>
+
+</body>
+</html>
