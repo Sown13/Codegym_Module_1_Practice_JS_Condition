@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Prime</title>
+</head>
+<body>
+<h1> Kiểm tra số nguyên tố</h1>
+<input type="button" value="Check Prime" onclick="isPrime()">
+<script>
+    function isPrime(num) {
+        num = prompt("Nhập số bất kỳ")
+        if (num <= 1) {
+            return  alert(num + " không phải là số nguyên tố")
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return  alert(num + " là số nguyên tố")
+    }
+</script>
+</body>
+</html>
